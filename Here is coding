@@ -1,0 +1,55 @@
+package wipro;
+
+import java.util.Scanner;
+
+abstract class Shape{
+	abstract void calculateArea(int a , int b);
+	abstract void calculateArea(int a);
+	void display() {
+		System.out.println("This is a Shape");
+	}
+}
+class Rectangle extends Shape{
+	@Override
+	void calculateArea(int reclen,int recbre) {
+		// TODO Auto-generated method stub
+		int a = reclen*recbre;
+		System.out.println("The area of the Rectangle is: "+a);
+	}
+	@Override
+	void calculateArea(int a) {
+		// TODO Auto-generated method stub
+		
+	}
+}
+class Circle extends Shape{
+	@Override
+	void calculateArea(int cirrad) {
+		// TODO Auto-generated method stub
+		double r = 3.14;
+		double radi = r*(cirrad*cirrad);
+		System.out.println("The area of the circle is: "+radi);
+	}
+	@Override
+	void calculateArea(int a, int b) {
+		// TODO Auto-generated method stub
+		
+	}
+}
+public class Practice {
+	public static void main(String[] args) {
+		Scanner rs = new Scanner(System.in);
+		System.out.println("To find the area of the Rectangle");
+		System.out.println("Enter the lenght of the Rectangle");
+		int reclen = rs.nextInt();
+		System.out.println("Enter the breadth of the Rectangle");
+		int recbre = rs.nextInt();
+		Shape sr = new Rectangle();
+		sr.calculateArea(reclen,recbre);
+		System.out.println("To find the area of the circle");
+		System.out.println("Enter the Radius of the circle");
+		int cirrad = rs.nextInt();
+		Shape r = new Circle();
+		r.calculateArea(cirrad);
+	}
+}
