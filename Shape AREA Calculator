@@ -1,0 +1,2 @@
+# Area-finding
+This Java project demonstrates the concept of Abstraction using an abstract class Shape. It includes two subclasses, Rectangle and Circle, that implement the abstract method calculateArea() to compute the respective areas.
